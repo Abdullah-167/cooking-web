@@ -1,6 +1,7 @@
 import Cards from './Cards'
 import CheckDish from './CheckDish'
 import Header from './Header'
+import RecentRecipes from './RecentRecipes'
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Header />
             <Cards />
             <CheckDish />
+            <RecentRecipes />
         </>
     )
 }
