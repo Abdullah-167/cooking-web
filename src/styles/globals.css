@@ -33,6 +33,10 @@ body {
 
 }
 
+.newrecipe-bg {
+  background-image: url('../../public/flowersbg.jpg');
+}
+
 
 
 .box:hover {
@@ -50,3 +54,6 @@ body {
     transform: translateY(-10px);
   }
 }
+
+
+

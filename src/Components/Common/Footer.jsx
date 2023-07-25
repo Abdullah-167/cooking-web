@@ -10,6 +10,9 @@ const Footer = () => {
     return (
         <div className='container'>
             <div className='flex justify-between items-center'>
+                <span className='text-[#2d2d28] opacity-[0.5]'>
+                    © 2020 Qode Interactive, All Rights Reserved
+                </span>
                 <div className='flex gap-9 py-2'>
                     {links.map((item, index) => {
                         return (
