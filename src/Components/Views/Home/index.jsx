@@ -1,10 +1,11 @@
+import Cards from './Cards'
 import Header from './Header'
 
 const Home = () => {
     return (
         <>
-          <Header />
-          sasasa
+            <Header />
+            <Cards />
         </>
     )
 }
