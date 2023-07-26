@@ -79,6 +79,19 @@ const Ingredients = () => {
                         </div>
                     </div>
                 ))}
+                <div className="flex w-full gap-6 bg-[#f9f6e7] mt-10">
+                    <p className="text-[26px] max-w-[150px] leading-9 font-secondary bg-[#fee86d] px-2 py-5">Nutritional Information</p>
+                    {fats.map((item, index) => (
+                        <div className="flex gap-12 items-center" key={index}>
+                            {item.nutritionalInformation.map((item, idx) => (
+                                <div key={idx}>
+                                    <p className="text-[22px] font-secondary">{item.number}</p>
+                                    <p className=" font-secondary text-sm text-center">{item.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
@@ -143,3 +156,35 @@ const data2 = [
         tick: <MdDone />
     }
 ];
+
+
+const fats = [
+    {
+        nutritionalInformation: [
+            {
+                number: '200g',
+                text: 'Fat'
+            },
+            {
+                number: '200g',
+                text: 'Fat'
+            },
+            {
+                number: '200g',
+                text: 'Fat'
+            },
+            {
+                number: '200g',
+                text: 'Fat'
+            },
+            {
+                number: '200g',
+                text: 'Fat'
+            },
+            {
+                number: '200g',
+                text: 'Fat'
+            },
+        ]
+    }
+]
