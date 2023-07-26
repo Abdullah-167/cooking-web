@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/
 import { AiOutlineClockCircle, AiOutlineTag, AiOutlineStar } from 'react-icons/ai';
 import { BiLike } from 'react-icons/bi';
 import { CiForkAndKnife } from 'react-icons/ci';
+import Ingredients from './Ingredients';
 
 const Header = () => {
     return (
@@ -57,6 +58,7 @@ const Header = () => {
                             No Reviews
                         </span>
                     </div>
+                    <Ingredients />
                 </div>
             </div>
         </div>
