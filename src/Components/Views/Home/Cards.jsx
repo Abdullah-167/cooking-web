@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BiLike } from 'react-icons/bi';
 import { HiOutlineShare } from 'react-icons/hi';
