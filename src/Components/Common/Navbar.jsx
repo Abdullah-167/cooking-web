@@ -348,7 +348,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div
-                className={`absolute top-0 transition-all sidebar-search duration-700 shadow-inner w-96 bg-white rounded-r-xl ${open ? 'translate-x-0 z-[999]' : '-translate-x-[500px]'
+                className={`absolute top-0 transition-all sidebar-search duration-700 shadow-2xl w-full max-w-96 bg-white rounded-r-xl ${open ? 'translate-x-0 z-[999]' : '-translate-x-[500px]'
                     }`}
                 style={{ height: '100vh' }}
             >
@@ -359,7 +359,7 @@ const Navbar = () => {
                         >
                             <RxCross1 />
                         </div>
-                        <div className="flex items-center justify-end gap-4 bg-white">
+                        <div className="flex flex-col items-center justify-end gap-4 bg-white">
                             <div
                                 className="relative"
                                 // @ts-ignore
