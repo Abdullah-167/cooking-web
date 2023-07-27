@@ -13,7 +13,7 @@ const Notes = () => {
                 <h2 className='text-3xl font-secondary pb-5'>Notes</h2>
                 <p className='text-[17px] text-gray-500 opacity-60 pb-5'> *Nutrition info is a rough estimate based on the ingredients. Note that values may vary from case to case. </p>
                 <p className='text-[17px] text-gray-500 opacity-60 pb-5'>  *As with all recipes, there is a number of ways you can get things done. If you believe that some of the instructions can be improved, or have a good alternative solution, feel free to leave a comment.  </p>
-                <div className='flex gap-5 pb-7'>
+                <div className='flex flex-wrap justify-center sm:flex-nowrap gap-5 pb-7'>
                     {icons.map((item, index) => {
                         return (
                             <div className='flex gap-2 items-center bg-[#F7F7F7] px-3 py-2 cursor-pointer' key={index}>

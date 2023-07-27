@@ -11,15 +11,15 @@ const Directions = () => {
     };
 
     return (
-        <div className=' container'>
-            <div className='max-w-[750px]'>
+        <div className='container px-5'>
+            <div className='w-full lg:max-w-[750px]'>
                 <h2 className='text-3xl font-secondary pb-5'>Directions</h2>
                 {data.map((item, index) => {
                     return (
-                        <div className={`relative  ${index > 1 ? 'pb-0' : 'pb-7'} border-l-[2px] border-l-[#fee86d] pl-10`} key={index}>
+                        <div className={`relative  ${index > 1 ? 'pb-0' : 'pb-7'} border-l-[2px] border-l-[#fee86d] pl-8 sm:pl-10`} key={index}>
                             <div className={` transition-all duration-300 pb-5 ${activeIndex2 === index ? ' opacity-50' : ' opacity-100'}`}>
-                                <h2 className='text-2xl font-secondary pb-5'>{item.mainHeading} </h2>
-                                <p className='text-lg text-gray-500 opacity-60 pb-6'>{item.firstPara}</p>
+                                <h2 className='text-xl sm:text-2xl font-secondary pb-5'>{item.mainHeading} </h2>
+                                <p className='text-base sm:text-lg text-gray-500 opacity-60 pb-6'>{item.firstPara}</p>
                                 <div className='flex gap-5 pb-6'>
                                     <Image className='w-full' src={item.img} alt='img' width={500} height={500} />
                                     {item.imgTwoShow && item.imgTwo && (
@@ -29,10 +29,9 @@ const Directions = () => {
                                         <Image className='w-full' src={item.imgThree} alt='img' width={500} height={500} />
                                     )}
                                 </div>
-                                <p className='text-lg text-gray-500 opacity-60'>{item.secPara}</p>
-
+                                <p className='text-base sm:text-lg text-gray-500 opacity-60'>{item.secPara}</p>
                             </div>
-                            <div className={`absolute ${index > 0 ? ' -top-2 -left-[30px] ' : ' -top-2 -left-[30px]'} w-14 h-14 text-2xl bg-[#fee86d] text-white rounded-full flex justify-center items-center`}>
+                            <div className={`absolute ${index > 0 ? ' -top-2 -left-[21px] sm:-left-[30px] ' : ' -top-2 -left-[21px] sm:-left-[30px]'} sm:w-14 w-10 sm:h-14 h-10 text-2xl bg-[#fee86d] text-white rounded-full flex justify-center items-center`}>
                                 {index + 1}
                             </div>
                             <div className="flex gap-2 items-center" >

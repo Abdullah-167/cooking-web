@@ -8,11 +8,11 @@ import Ingredients from './Ingredients';
 
 const Header = () => {
     return (
-        <div className=' container'>
-            <div className='py-16'>
+        <div className='container'>
+            <div className='py-10 sm:py-16'>
                 <div className='max-w-[720px]'>
-                    <h1 className='max-w-[657px] leading-[55px] font-secondary text-[55px] pb-5'> The healthiest way to start your day</h1>
-                    <div className='flex gap-8 pb-10 '>
+                    <h1 className='max-w-[657px] leading:[40px] sm:leading-[55px] font-secondary text-4xl sm:text-[55px] pb-5'> The healthiest way to start your day</h1>
+                    <div className='flex flex-wrap md:flex-nowrap gap-8 pb-10 '>
                         <div className='flex items-center gap-4'>
                             <Image src={'/girlicon.png'} alt='icon' width={50} height={50} />
                             <p className='text-sm'>
@@ -20,9 +20,9 @@ const Header = () => {
                                 <p className='text-xs opacity-40 pt-0.5'>May 20, 2020</p>
                             </p>
                         </div>
-                        <div className='flex gap-6 items-center border-l pl-4 leading-4'>
+                        <div className='flex flex-wrap gap-6 items-center border-l pl-4 leading-4'>
                             <p className='text-gray-700 opacity-60'>Share:</p>
-                            <div className='flex gap-5'>
+                            <div className='flex flex-wrap gap-5'>
                                 {icons.map((item, index) => {
                                     return (
                                         <div className={` text-white text-xs flex items-center gap-1 px-2 py-1.5 cursor-pointer ${item.bgColr} `} key={index}>
@@ -34,11 +34,11 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <iframe src="https://www.youtube.com/embed/_tmq1PT_88c" className='w-full pb-5 h-[400px]' frameborder="0"></iframe>
-                    <div className='flex justify-center gap-5 pb-7'>
+                    <iframe src="https://www.youtube.com/embed/_tmq1PT_88c" className='w-full pb-5 h-[250px] sm:h-[400px]' frameborder="0"></iframe>
+                    <div className='flex flex-col sm:flex-row mx-auto max-w-[100px] sm:max-w-full justify-center gap-5 pb-7'>
                         {data.map((item, index) => {
                             return (
-                                <div className='flex items-center gap-1 opacity-60 text-gray-600' key={index}>
+                                <div className='flex justify-center items-center gap-1 opacity-60 text-gray-600' key={index}>
                                     {item.icon}
                                     <span className='text-sm'>
                                         {item.text}
@@ -47,7 +47,7 @@ const Header = () => {
                             )
                         })}
                     </div>
-                    <p className='text-xl text-gray-600 opacity-60 w-full leading-[32px] pb-5'>Nam aliquam sem et tortor consequat. Odio tempor orci dapibus ultrices in iaculis. Vitae proin sagittis nisl rhoncus mattis rhoncus. Sed risus ultricies tristique nulla aliquet. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumd ut perspiciatis unde omnis iste voluptatem accusantium doloremque laudantium,  aperiam, eaque.</p>
+                    <p className='text-lg sm:text-xl text-gray-600 opacity-60 w-full leading-[32px] pb-5'>Nam aliquam sem et tortor consequat. Odio tempor orci dapibus ultrices in iaculis. Vitae proin sagittis nisl rhoncus mattis rhoncus. Sed risus ultricies tristique nulla aliquet. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumd ut perspiciatis unde omnis iste voluptatem accusantium doloremque laudantium,  aperiam, eaque.</p>
                     <div className='flex px-5 py-2 gap-1 text-[#FEE86D] items-center bg-[#F9F6E7] max-w-[250px]'>
                         <AiOutlineStar />
                         <AiOutlineStar />
@@ -107,6 +107,6 @@ const data = [
     },
     {
         icon: <AiOutlineTag size={20} />,
-        text: '30 minutes'
+        text: 'Files'
     },
 ]

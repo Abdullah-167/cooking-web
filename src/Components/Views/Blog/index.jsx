@@ -9,8 +9,8 @@ import DropDown from './DropDown'
 
 const Blog = () => {
     return (
-        <div className=' container flex gap-10'>
-            <div className='max-w-[700px]'>
+        <div className=' container flex flex-wrap lg:flex-nowrap gap-10 px-5'>
+            <div className='w-full lg:max-w-[700px]'>
                 <Header />
                 <Directions />
                 <Notes />

@@ -31,62 +31,47 @@ const Ingredients = () => {
             <div className="pb-10">
                 <p className=" font-secondary text-lg pb-5">Adjust Servings</p>
                 {data.map((item, index) => (
-                    <div key={index} className="relative">
-                        <div className="relative z-10 opacity-95">
-                            <div className="card">
-                                <div className="flex gap-4 items-center ">
-                                    <span
-                                        className={`border-[1.5px] border-gray-400 w-4 h-4 rounded-full ${activeIndex.includes(index) ? 'hidden' : ''}`}
-                                        onClick={() => handleIndex(index)}
-                                    ></span>
-                                    {activeIndex.includes(index) && (
-                                        <h1 className="text-gray-500 opacity-60 " onClick={() => handleIndex(index)}>{item.tick}</h1>
-                                    )}
-                                    <h1 className="text-gray-500 opacity-60 border-l-2 border-l-gray-100 pl-5 py-3 relative">
-                                        {item.fieldOne}
-                                        {activeIndex.includes(index) && (
-                                            <p className="absolute top-[25px] left-3 h-[0.5px] w-full bg-black"></p>
-                                        )}
-                                    </h1>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex items-center gap-2" key={index}>
+                        <div
+                            className={`border-[1.5px] border-gray-400 w-4 h-4 max-h-4 min-h-[4] p-1.5 max-w-4 min-w-4 rounded-full ${activeIndex.includes(index) ? 'hidden' : ''}`}
+                            onClick={() => handleIndex(index)}
+                        ></div>
+                        {activeIndex.includes(index) && (
+                            <h1 className={`text-gray-500 opacity-60 ${activeIndex.includes(index) ? 'block' : 'hidden'} `} onClick={() => handleIndex(index)}>{item.tick}</h1>
+                        )}
+                        <h1 className={`text-gray-500 text-sm opacity-60 border-l-2 border-l-gray-100 pl-5 py-3 ${activeIndex.includes(index) ? 'line-through' : ''}`}>
+                            {item.fieldOne}
+                        </h1>
                     </div>
                 ))}
+
             </div>
             <div className="">
                 <p className=" font-secondary text-lg pb-5">For Dressing</p>
                 {data2.map((item, index) => (
-                    <div key={index} className="relative">
-                        <div className="relative z-10 opacity-95">
-                            <div className="card">
-                                <div className="flex gap-4 items-center ">
-                                    <span
-                                        className={`border-[1.5px] border-gray-400 w-4 h-4 rounded-full ${activeIndex2.includes(index) ? 'hidden' : ''}`}
-                                        onClick={() => handleIndexTwo(index)}
-                                    ></span>
-                                    {activeIndex2.includes(index) && (
-                                        <h1 className="text-gray-500 opacity-60 " onClick={() => handleIndexTwo(index)}>{item.tick}</h1>
-                                    )}
-                                    <h1 className="text-gray-500 opacity-60 border-l-2 border-l-gray-100 pl-5 py-3 relative">
-                                        {item.fieldOne}
-                                        {activeIndex2.includes(index) && (
-                                            <p className="absolute top-[25px] left-3 h-[0.5px] w-full bg-black"></p>
-                                        )}
-                                    </h1>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex sm:items-center  gap-2" key={index}>
+                        <div
+                            className={`border-[1.5px] border-gray-400 w-4 h-4 max-h-4 min-h-[4] p-1.5 max-w-4 min-w-4 rounded-full ${activeIndex.includes(index) ? 'hidden' : ''}`}
+                            onClick={() => handleIndex(index)}
+                        ></div>
+                        {activeIndex.includes(index) && (
+                            <h1 className={`text-gray-500 opacity-60 ${activeIndex.includes(index) ? 'block' : 'hidden'} `} onClick={() => handleIndex(index)}>{item.tick}</h1>
+                        )}
+                        <h1 className={`text-gray-500 text-sm opacity-60 cursor-pointer border-l-2 border-l-gray-100 pl-5 py-3 ${activeIndex2.includes(index) ? 'line-through' : ''}`}
+                            onClick={() => handleIndexTwo(index)}
+                        >
+                            {item.fieldOne}
+                        </h1>
                     </div>
                 ))}
-                <div className="flex w-full gap-6 bg-[#f9f6e7] mt-10">
-                    <p className="text-[26px] max-w-[150px] leading-9 font-secondary bg-[#fee86d] px-2 py-5">Nutritional Information</p>
+                <div className="flex flex-wrap md:flex-nowrap w-full gap-6 bg-[#f9f6e7] mt-10">
+                    <p className="text-[26px] w-full text-center md:max-w-[150px] leading-9 font-secondary bg-[#fee86d] px-2 py-5">Nutritional Information</p>
                     {fats.map((item, index) => (
-                        <div className="flex gap-12 items-center" key={index}>
+                        <div className="flex gap-12 justify-center items-center" key={index}>
                             {item.nutritionalInformation.map((item, idx) => (
-                                <div key={idx}>
+                                <div className="max-w-[100px] mx-auto" key={idx}>
                                     <p className="text-[22px] font-secondary">{item.number}</p>
-                                    <p className=" font-secondary text-sm text-center">{item.text}</p>
+                                    <p className=" font-secondary  text-sm text-center">{item.text}</p>
                                 </div>
                             ))}
                         </div>

@@ -6,7 +6,7 @@ const HorCards = () => {
     return (
         <div className=' container'>
             <div className=' py-14'>
-                <div className=' flex gap-3'>
+                <div className='flex flex-wrap md:flex-nowrap justify-center gap-3'>
                     {sidebar.map((item, index) => {
                         return (
                             <div className='flex flex-col gap-6 items-center max-w-[350px] py-1' key={index}>
