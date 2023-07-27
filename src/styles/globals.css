@@ -54,3 +54,7 @@ body {
     transform: translateY(-10px);
   }
 }
+
+.modal-open {
+  overflow: hidden;
+}

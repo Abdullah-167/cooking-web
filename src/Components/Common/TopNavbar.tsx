@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 import { CiSearch } from 'react-icons/ci';
 import { CiBookmark } from 'react-icons/ci';
 
 const TopNavbar = () => {
   return (
-    <div className='container'>
-      <div className='flex justify-between items-center border-b border-b-[#dddbdb] py-11'>
+    <div className='container px-5'>
+      <div className='hidden lg:flex justify-between items-center border-b border-b-[#dddbdb] py-11'>
         <div>
           <Image src={'/logo.png'} alt={''} width={220} height={220} />
         </div>
@@ -25,7 +25,7 @@ const TopNavbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TopNavbar
+export default TopNavbar;
