@@ -1,46 +1,47 @@
-import React from 'react'
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { IoIosArrowDown } from "react-icons/io";
 
 const DropDown = () => {
+
+    const [dropDown, setDropDown] = useState(false);
+
     return (
         <div>
-            {data.map((item, index) => (
-                <div className="flex-shrink-0 relative" key={index}>
-                    <div
-                        className="flex text-base font-medium items-center text-[#6f6f6f] active:text-secondary hover:text-secondary transition-all duration-200 cursor-pointer focus:outline-none p-[7px]"
-                        onMouseOver={() => handleOpen(item)}
+            <div
+                className="relative pb-40"
+                onMouseLeave={() => setDropDown(false)}
+            >
+                <button
+                    onMouseOver={() => setDropDown(true)}
+                    className="text-[14px] font-medium flex gap-1 justify-center items-center text-[#6f6f6f] active:text-secondary hover:text-secondary  p-2 "
+                >
+                    <span>Home</span>
+                    <span
+                        className={`text-[14px] transition-all duration-200 ${dropDown ? "rotate-180" : " "}`}
                     >
-                        <Link href={item.path}> <span>{item.mainText}</span> </Link>
-                        {index < 1 && (
-                            <span
-                                className={`transition-all duration-300 font-normal text-lg transform  ${isOpen && currentItem === item ? 'rotate-180' : 'rotate-0'
-                                    }`}
-                            >
-                                <IoIosArrowDown />
-                            </span>
-                        )}
-                    </div>
-                    {isOpen && currentItem === item && (
-                        <div
-                            className='absolute w-[250px] top-[50px] left-0 right-[160px] text-sm font-bold mt-2 bg-main  text-[rgb(0,0,0,0.7)] '
-                            id="dropdown"
-                            onMouseLeave={handleClose}
-                            ref={dropdownRef}
-                        >
-                            {item.innerText?.map((innerItem, innerIndex) => (
-                                <div className="mx-auto cursor-pointer gap-4   px-4 py-3 my-5 hover:bg-[#f9f9f9] transition-all duration-700 flex items-center" key={innerIndex}>
-                                    <div className="text-2xl mr-2 text-[#5412BC]" >
-                                        {innerItem.icon}
-                                    </div>
-                                    <div>
-                                        <Link href={innerItem.path}><span className="text-sm">{innerItem.label}</span> </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            ))}</div>
-    )
-}
+                        <IoIosArrowDown />
+                    </span>
+                </button>
 
-export default DropDown
+                <ul
+                    className={`absolute z-20 left-0 top-8 right-0 w-64 py-2 bg-[#fffdfd] overflow-hidden transition-all duration-500 ${dropDown ? "shadow-xl  max-h-80" : "  max-h-0"
+                        }`}
+                >
+                    {links.map((item, index) => {
+                        return (
+                            <Link href={''} key={index}>
+                                <li className="flex gap-4 w-full items-center px-3 py-2 text-[14px] hover:text-[#91A3F2] hover:bg-gray-100">
+                                    {item.link}
+                                </li>
+                            </Link>
+                        );
+                    })}
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+export default DropDown;
+

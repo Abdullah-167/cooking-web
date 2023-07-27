@@ -7,13 +7,13 @@ import { CiBookmark } from 'react-icons/ci';
 
 const Cards = () => {
     return (
-        <div className=' container'>
-            <div className='flex gap-8 py-24'>
+        <div className=' container px-5'>
+            <div className='flex flex-wrap md:flex-nowrap gap-8 py-24'>
                 {data.map((item, index) => {
                     return (
                         <div key={index}>
-                            <div className="relative overflow-hidden max-w-[500px] ">
-                                <Image className='transition-transform pb-3 hover:scale-105 duration-500' src={item.mainImg} alt={'food'} width={500} height={500} />
+                            <div className="relative overflow-hidden lg:max-w-[500px] ">
+                                <Image className='transition-transform pb-3 hover:scale-105 duration-500 w-full' src={item.mainImg} alt={'food'} width={500} height={500} />
                             </div>
                             <div className='flex gap-7 pb-3'>
                                 <div className='flex gap-1 text-gray-400 items-center'>

@@ -5,6 +5,7 @@ import Notes from './Notes'
 import Form from './Form'
 import HorCards from './HorCards'
 import SideBar from './SideBar'
+import DropDown from './DropDown'
 
 const Blog = () => {
     return (
@@ -15,6 +16,7 @@ const Blog = () => {
                 <Notes />
                 <HorCards />
                 <Form />
+                {/* <DropDown /> */}
             </div>
             <div>
                 <SideBar />
